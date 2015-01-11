@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>An Agile Front End Workflow</title>
+
+		<meta name="description" content="A presentation on an agile front end workflow">
+		<meta name="author" content="Eric Smith" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+                <section data-background="firebrick">
+                    <h1>An Agile Front End Workflow</h1>
+                    <h3>Eric Smith</h3>
+                    <aside class="notes">
+                        Welcome etc.
+                        How many people are excited about the agile part?
+                        How many people are excited about the front end part?
+                        I'm not a front end dev or a pm... I'm a developer and I get excited about solutions...
+                        What I'll be showing you in the next 40 minutes is our new way of working
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>The old way</h2>
+                        <img class="stretch" src="assets/old-way.svg" />
+                        <aside class="notes">
+                            Give examples eg a view (simple), search results (complex)
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>The Problems</h2>
+                        <ul>
+                            <li class="fragment">Development is a bottleneck</li>
+                            <li class="fragment">Theming at the end creates pressure</li>
+                        </ul>
+                        <aside class="notes">
+                            Themer twiddles thumbs at start of the project.
+                            This creates a gap - this increases over the life of the project.
+                            Themer goes insane at the end of the project.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Historical Problems</h2>
+                        <ul>
+                            <li class="fragment">Drupal - A million ways to die</li>
+                            <li class="fragment">CSS is a one man game</li>
+                            <li class="fragment">Time taken to deliver a page that looks the same</li>
+                            <li class="fragment">Adding things to the end of stylesheet</li>
+                            <li class="fragment">Risk of breaking everything</li>
+                            <li class="fragment">Hell is other people's CSS</li>
+                        </ul>
+                        <aside class="notes">
+                            Historical problems we want to solve, not related to the old way.
+                            Preprocess functions, theme functions, templates, ctools style plugins, display suite, etc..
+                            CSS is a one man game is a myth
+                            Interact with PMs...
+                        </aside>
+                    </section>
+                </section>
+
+                <section data-background="firebrick">
+                    <h2>The Target</h2>
+                    <ul>
+                        <li class="fragment">Flexible system</li>
+                        <li class="fragment">A development team not an individual</li>
+                        <li class="fragment">An efficient workflow</li>
+                        <li class="fragment">Deliver amazing results each sprint</li>
+                    </ul>
+                    <aside class="notes">
+                        Link last point to the old way gap
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Where to start?</h2>
+                    </section>
+                    <section>
+                        <h2>Team structure</h2>
+                        <aside class="notes">
+                            Team leaders are awesome!
+                            Their responsibility to make sure the team understands the front end logic.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Lay the foundations</h2>
+                        <ul>
+                            <li>SASS / Compass</li>
+                            <li>SMACSS / BEM</li>
+                            <li>Bundler</li>
+                        </ul>
+                        <aside class="notes">
+                            Interact with crowd, get people to stand up if they are front end
+                            devs, sit down if they don't use a preprocessor.
+                            Mention references at end of talk, briefly cover smaccs.
+                            SMACCS - this is the bit where we build something and
+                            tell drupal about it.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Coding standards</h2>
+                        <p class="fragment">Drupal has CSS coding standards</p>
+                        <p class="fragment">The rest of the web has coding standards</p>
+                        <aside class="notes">
+                            Most people know the php coding standards
+                            Things like line length, spacing, nameing conventions.
+                            It is there for consistency, most historical problems are there
+                            due to incosistency or bad css.
+                            Learn from sass coding standards. Again, we are building
+                            something and telling drupal about it - so learn from
+                            the other 98%
+                        </aside>
+                    </section>
+                </section>
+
+                <section data-background="firebrick">
+                    <section>
+                        <h2>Documenting CSS</h2>
+                        <aside class="notes">
+                            PHP Tell the why, not what.
+                            CSS Tell the what / when / how / why / where and why.
+                            Story about generating html from css.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Hologram syntax</h2>
+                        <pre><code data-trim>
+/*doc
+---
+title: Alert
+name: alert
+category: basics
+---
+I am a comment
+```html_example
+<div class="alert">I am the example code</div>
+```
+*/
+                        </code></pre>
+                        <aside class="notes">
+                            don't forget parent and init. explain what you will show next
+                        </aside>
+                    </section>
+
+                    <section data-background-video="assets/hologramexample.mov">
+                    </section>
+
+                    <section>
+                        <h2>Benefits</h2>
+                        <ul>
+                            <li class="fragment">Visibility within the dev team</li>
+                            <li class="fragment">Visibility for the client</li>
+                            <li class="fragment">Styleguide is testable</li>
+                            <li class="fragment">Ability to theme without Drupal</li>
+                        </ul>
+                        <aside class="notes">
+                            Give team benefit example
+                            Give estimation / double checking with client example re forms
+                            Regression testing / resposive testing
+                            Briefly mention Gary / bringing in a front end dev. Explain
+                            that is a possibility, not what happened.
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Another Problem</h2>
+                    <blockquote class="fragment">"That hover colour isn't right"</blockquote>
+                    <blockquote class="fragment">"That slide transition is too slow"</blockquote>
+                    <aside class="notes">
+                        Build up the story with example of complex backend development.
+                    </aside>
+                </section>
+
+                <section data-background="firebrick">
+                    <h2>The non Drupal themer</h2>
+                    <ul>
+                        <li class="fragment">Just creating components isn't enough</li>
+                        <li class="fragment">Drupal theming is a bit too much</li>
+                    </ul>
+                    <aside class="notes">
+                        We don't live in an ideal world.
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Prototyping inside Drupal</h2>
+                        <ul>
+                            <li class="fragment">Not tied to functionality</li>
+                            <li class="fragment">Designer can sign off mid sprint</li>
+                            <li class="fragment">HTML / CSS is integrated once signed off <span class="fragment">(and functionality is developed)</span></li>
+                        </ul>
+                        <aside class="notes">
+                            Prototyping does not mean throwing your work away or duplicate effort.
+                            Same CSS is used as its within the website.
+                            Simple module thats essentially a serious of page callbacks, templates and a theme function.
+                            Not tied to functionality: unblocks the themer and reinforces good practise to not rely on build classes
+                            Interactive / responsive elements clarified in brower during the sprint
+                        </aside>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim>
+/**
+ * Implements hook_menu().
+ */
+function sage_statics_menu() {
+  $items = array();
+  $items['statics/%'] = array(
+    'page callback' => 'sage_statics_page',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim>
+/**
+ * Page callback: Statics pages
+ */
+function sage_statics_page($page) {
+  switch ($page) {
+    case SageStatics::PAGE_BOOK_PRODUCT:
+    return theme(SageStatics::THEME_BOOK_PRODUCT);
+
+    // etc...
+  }
+}
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section data-background="firebrick">
+                    <section>
+                        <h2>3 Ticket Approach</h2>
+                        <ul>
+                            <li>Theme: no dependency</li>
+                            <li>Develop: no dependency</li>
+                            <li>Integrate: dependent on both</li>
+                        </ul>
+                        <aside class="notes">
+                            Talk about ticket structure / child tasks
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Theme tickets</h2>
+                        <ul>
+                            <li class="fragment">Look to the style guide for existing styles</li>
+                            <li class="fragment">Estimate new components / prototype</li>
+                        </ul>
+                        <aside class="notes">
+                            Bring up previous story - this is agile, client might be happy
+                            to reuse than to create extra work.
+                            Talk about whose job it is to estimate components
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Development tickets</h2>
+                        <p><span class="fragment">(Mostly) </span>Unchanged</p>
+                        <aside class="notes">
+                            Explain communication with themer, possibly picking
+                            out classes if it is simple enought.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Integration tickets</h2>
+                        <ul>
+                            <li>Available when theme and dev work is complete</li>
+                            <li>Can be shared amongst the team</li>
+                        </ul>
+                        <aside class="notes">
+                            Typically just merging the markup from the statics into the actual theme.
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>@todo:</h2>
+                    <ul>
+                        <li class="fragment">Analysing a design in progress for components is hard</li>
+                        <li class="fragment">Refactoring happens often</li>
+                        <li class="fragment">Integration can be hard to estimate</li>
+                    </ul>
+                </section>
+
+                <section data-background="firebrick">
+                    <h2>Questions?</h2>
+                    <ul>
+                        <li>eric.smith@cameronandwilding.com</li>
+                        <li>erigsmith @ twitter</li>
+                    </ul>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+			});
+
+		</script>
+
+	</body>
+</html>
