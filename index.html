@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -32,6 +33,7 @@
 			<div class="slides">
                 <section data-background="firebrick">
                     <h1>An Agile Front End Workflow</h1>
+                    <img src="assets/candw.png" class="reset-img" />
                     <h3>Eric Smith</h3>
                     <aside class="notes">
                         Welcome etc.
@@ -69,7 +71,6 @@
                             <li class="fragment">CSS is a one man game</li>
                             <li class="fragment">Time taken to deliver a page that looks the same</li>
                             <li class="fragment">Adding things to the end of stylesheet</li>
-                            <li class="fragment">Risk of breaking everything</li>
                             <li class="fragment">Hell is other people's CSS</li>
                         </ul>
                         <aside class="notes">
@@ -81,10 +82,9 @@
                     </section>
                 </section>
 
-                <section data-background="firebrick">
+                <section>
                     <h2>The Target</h2>
                     <ul>
-                        <li class="fragment">Flexible system</li>
                         <li class="fragment">A development team not an individual</li>
                         <li class="fragment">An efficient workflow</li>
                         <li class="fragment">Deliver amazing results each sprint</li>
@@ -99,18 +99,11 @@
                         <h2>Where to start?</h2>
                     </section>
                     <section>
-                        <h2>Team structure</h2>
-                        <aside class="notes">
-                            Team leaders are awesome!
-                            Their responsibility to make sure the team understands the front end logic.
-                        </aside>
-                    </section>
-                    <section>
                         <h2>Lay the foundations</h2>
                         <ul>
-                            <li>SASS / Compass</li>
-                            <li>SMACSS / BEM</li>
-                            <li>Bundler</li>
+                            <li class="fragment">Team structure</li>
+                            <li class="fragment">SASS / Compass</li>
+                            <li class="fragment">SMACSS / BEM</li>
                         </ul>
                         <aside class="notes">
                             Interact with crowd, get people to stand up if they are front end
@@ -136,7 +129,7 @@
                     </section>
                 </section>
 
-                <section data-background="firebrick">
+                <section>
                     <section>
                         <h2>Documenting CSS</h2>
                         <aside class="notes">
@@ -174,20 +167,20 @@ I am a comment
                         <ul>
                             <li class="fragment">Visibility within the dev team</li>
                             <li class="fragment">Visibility for the client</li>
-                            <li class="fragment">Styleguide is testable</li>
-                            <li class="fragment">Ability to theme without Drupal</li>
+                            <li class="fragment">You can test the style guide</li>
+                            <li class="fragment">You can theme without Drupal</li>
                         </ul>
                         <aside class="notes">
                             Give team benefit example
                             Give estimation / double checking with client example re forms
-                            Regression testing / resposive testing
+                            Regression testing / responsive testing
                             Briefly mention Gary / bringing in a front end dev. Explain
                             that is a possibility, not what happened.
                         </aside>
                     </section>
                 </section>
 
-                <section>
+                <section data-background="firebrick">
                     <h2>Another Problem</h2>
                     <blockquote class="fragment">"That hover colour isn't right"</blockquote>
                     <blockquote class="fragment">"That slide transition is too slow"</blockquote>
@@ -196,7 +189,7 @@ I am a comment
                     </aside>
                 </section>
 
-                <section data-background="firebrick">
+                <section>
                     <h2>The non Drupal themer</h2>
                     <ul>
                         <li class="fragment">Just creating components isn't enough</li>
@@ -258,7 +251,7 @@ function sage_statics_page($page) {
                     </section>
                 </section>
 
-                <section data-background="firebrick">
+                <section>
                     <section>
                         <h2>3 Ticket Approach</h2>
                         <ul>
@@ -286,7 +279,7 @@ function sage_statics_page($page) {
 
                     <section>
                         <h2>Development tickets</h2>
-                        <p><span class="fragment">(Mostly) </span>Unchanged</p>
+                        <p>(Mostly) Unchanged</p>
                         <aside class="notes">
                             Explain communication with themer, possibly picking
                             out classes if it is simple enought.
@@ -314,12 +307,13 @@ function sage_statics_page($page) {
                     </ul>
                 </section>
 
-                <section data-background="firebrick">
+                <section data-background="papayawhip">
                     <h2>Questions?</h2>
                     <ul>
-                        <li>eric.smith@cameronandwilding.com</li>
-                        <li>erigsmith @ twitter</li>
+                        <li>Mail: eric.smith@cameronandwilding.com</li>
+                        <li>Twitter: ericgsmith</li>
                     </ul>
+                    <div><img src="assets/candw.png" class="reset-img" /></div>
                 </section>
 			</div>
 
