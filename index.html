@@ -36,11 +36,12 @@
                     <img src="assets/candw.png" class="reset-img" />
                     <h3>Eric Smith</h3>
                     <aside class="notes">
-                        Welcome etc.
+                        Welcome etc. Impact story.
                         How many people are excited about the agile part?
                         How many people are excited about the front end part?
-                        I'm not a front end dev or a pm... I'm a developer and I get excited about solutions...
+                        Intro... I'm a developer and I get excited about solutions...
                         What I'll be showing you in the next 40 minutes is our new way of working
+                        Talking about process, technology, etc.
                     </aside>
                 </section>
 
@@ -49,11 +50,13 @@
                         <h2>The old way</h2>
                         <img class="stretch" src="assets/old-way.svg" />
                         <aside class="notes">
+                            The way things have always been done.
                             Give examples eg a view (simple), search results (complex)
+                            Talk about arrow = gap.
                         </aside>
                     </section>
                     <section>
-                        <h2>The Problems</h2>
+                        <h2>The Process Problem</h2>
                         <ul>
                             <li class="fragment">Development is a bottleneck</li>
                             <li class="fragment">Theming at the end creates pressure</li>
@@ -65,19 +68,20 @@
                         </aside>
                     </section>
                     <section>
-                        <h2>Historical Problems</h2>
+                        <h2>The Historical Problems</h2>
                         <ul>
                             <li class="fragment">Drupal - A million ways to die</li>
                             <li class="fragment">CSS is a one man game</li>
-                            <li class="fragment">Time taken to deliver a page that looks the same</li>
-                            <li class="fragment">Adding things to the end of stylesheet</li>
                             <li class="fragment">Hell is other people's CSS</li>
+                            <li class="fragment">Adding things to the end of stylesheet</li>
+                            <li class="fragment">Time taken to deliver a page that looks the same</li>
                         </ul>
                         <aside class="notes">
                             Historical problems we want to solve, not related to the old way.
                             Preprocess functions, theme functions, templates, ctools style plugins, display suite, etc..
                             CSS is a one man game is a myth
-                            Interact with PMs...
+                            Ask devs if they have ever done this
+                            Interact with PMs re page the looks the same - views news / blog example
                         </aside>
                     </section>
                 </section>
@@ -85,12 +89,12 @@
                 <section>
                     <h2>The Target</h2>
                     <ul>
-                        <li class="fragment">A development team not an individual</li>
-                        <li class="fragment">An efficient workflow</li>
-                        <li class="fragment">Deliver amazing results each sprint</li>
+                        <li>A development team not an individual</li>
+                        <li>An efficient workflow</li>
+                        <li>Deliver amazing results each sprint</li>
                     </ul>
                     <aside class="notes">
-                        Link last point to the old way gap
+                        Link last point to the old way gap - this is just the opposite to the problems
                     </aside>
                 </section>
 
@@ -106,11 +110,13 @@
                             <li class="fragment">SMACSS / BEM</li>
                         </ul>
                         <aside class="notes">
+                            Talk about responsibilities of the leaders.
                             Interact with crowd, get people to stand up if they are front end
                             devs, sit down if they don't use a preprocessor.
                             Mention references at end of talk, briefly cover smaccs.
                             SMACCS - this is the bit where we build something and
                             tell drupal about it.
+                            Talk about pattern libraries / components.
                         </aside>
                     </section>
                     <section>
@@ -120,8 +126,8 @@
                         <aside class="notes">
                             Most people know the php coding standards
                             Things like line length, spacing, nameing conventions.
-                            It is there for consistency, most historical problems are there
-                            due to incosistency or bad css.
+                            It is there for consistency - most historical problems are there
+                            due to inconsistency or bad css.
                             Learn from sass coding standards. Again, we are building
                             something and telling drupal about it - so learn from
                             the other 98%
@@ -155,7 +161,8 @@ I am a comment
 */
                         </code></pre>
                         <aside class="notes">
-                            don't forget parent and init. explain what you will show next
+                            Explain parent / category relationship.
+                            Explain how to set up and what you will show next.
                         </aside>
                     </section>
 
@@ -171,7 +178,7 @@ I am a comment
                             <li class="fragment">You can theme without Drupal</li>
                         </ul>
                         <aside class="notes">
-                            Give team benefit example
+                            Give team benefit example.
                             Give estimation / double checking with client example re forms
                             Regression testing / responsive testing
                             Briefly mention Gary / bringing in a front end dev. Explain
@@ -211,9 +218,10 @@ I am a comment
                         <aside class="notes">
                             Prototyping does not mean throwing your work away or duplicate effort.
                             Same CSS is used as its within the website.
-                            Simple module thats essentially a serious of page callbacks, templates and a theme function.
+                            Give example of building something quickly in the first sprint.
+                            Simple module that is essentially a serious of page callbacks, templates and a theme function.
                             Not tied to functionality: unblocks the themer and reinforces good practise to not rely on build classes
-                            Interactive / responsive elements clarified in brower during the sprint
+                            Interactive / responsive elements clarified in browser during the sprint
                         </aside>
                     </section>
 
@@ -261,6 +269,8 @@ function sage_statics_page($page) {
                         </ul>
                         <aside class="notes">
                             Talk about ticket structure / child tasks
+                            Give examples of different stages of the project
+                            (e.g kickoff through to ecommerce)
                         </aside>
                     </section>
 
@@ -283,6 +293,7 @@ function sage_statics_page($page) {
                         <aside class="notes">
                             Explain communication with themer, possibly picking
                             out classes if it is simple enought.
+                            Make sure all data is available for the front end.
                         </aside>
                     </section>
 
@@ -296,15 +307,22 @@ function sage_statics_page($page) {
                             Typically just merging the markup from the statics into the actual theme.
                         </aside>
                     </section>
+
+                    <section>
+                        <h2>The new way</h2>
+                        <img class="stretch" src="assets/new-way.svg" />
+                        <aside class="notes">
+                            The gap is smaller, it should never go over one sprint.
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>@todo:</h2>
-                    <ul>
-                        <li class="fragment">Analysing a design in progress for components is hard</li>
-                        <li class="fragment">Refactoring happens often</li>
-                        <li class="fragment">Integration can be hard to estimate</li>
-                    </ul>
+                    <h2>@todo: TEST!</h2>
+                    <aside>
+                        Refactoring will happen often.
+                        Talk about component testing, whole site regression testing.
+                    </aside>
                 </section>
 
                 <section data-background="papayawhip">
@@ -314,6 +332,40 @@ function sage_statics_page($page) {
                         <li>Twitter: ericgsmith</li>
                     </ul>
                     <div><img src="assets/candw.png" class="reset-img" /></div>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>@see: Sass</h2>
+                        <ul>
+                            <li><a href="http://sass-lang.com/">Sass</a></li>
+                            <li><a href="http://compass-style.org/">Compass</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>@see: Design components</h2>
+                        <ul>
+                            <li><a href="https://smacss.com/">SMACSS</a></li>
+                            <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=0ulC_UiObS0">Managing Complex Projects With Design Components</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>@see: Coding standards</h2>
+                        <ul>
+                            <li><a href="https://www.drupal.org/node/1886770">CSS coding standards</a></li>
+                            <li><a href="https://github.com/necolas/idiomatic-css">Principles of writing consistent, idiomatic CSS</a></li>
+                            <li><a href="http://cssguidelin.es/">High-level advice and guidelines for writing sane, manageable, scalable CSS</a></li>
+                            <li><a href="http://sass-guidelin.es/">An opinionated styleguide for writing sane, maintainable and scalable Sass</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>@see: Style guides</h2>
+                        <ul>
+                            <li><a href="https://github.com/trulia/hologram">Hologram</a></li>
+                            <li><a href="https://github.com/davidhund/styleguide-generators">An overview of Pattern Library Generators</a></li>
+                        </ul>
+                    </section>
                 </section>
 			</div>
 
