@@ -35,8 +35,9 @@
                     <h1>An Agile Front End Workflow</h1>
                     <img src="assets/candw.png" class="reset-img" />
                     <h3>Eric Smith</h3>
+                    <p><a href="https://twitter.com/ericgsmith">@ericgsmith</a></p>
                     <aside class="notes">
-                        Welcome etc. Impact story.
+                        Welcome etc. FED story.
                         How many people are excited about the agile part?
                         How many people are excited about the front end part?
                         Intro... I'm a developer and I get excited about solutions...
@@ -46,6 +47,21 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Project Timeline</h2>
+                        <img src="assets/project-start.svg">
+                        <aside class="notes">
+                            Explain sprint 0, typical project lifetime.
+                            Explain what typical scaling up is.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Ticket Workflow</h2>
+                        <img src="assets/ticket-workflow.svg">
+                        <aside class="notes">
+                            Talk through peer review, qa, done.
+                        </aside>
+                    </section>
                     <section>
                         <h2>The old way</h2>
                         <img class="stretch" src="assets/old-way.svg" />
@@ -61,6 +77,7 @@
                             <li class="fragment">Development is a bottleneck</li>
                             <li class="fragment">Theming at the end creates pressure</li>
                         </ul>
+                        <img src="assets/project-sprint-5.svg">
                         <aside class="notes">
                             Themer twiddles thumbs at start of the project.
                             This creates a gap - this increases over the life of the project.
@@ -75,6 +92,7 @@
                             <li class="fragment">Hell is other people's CSS</li>
                             <li class="fragment">Adding things to the end of stylesheet</li>
                             <li class="fragment">Time taken to deliver a page that looks the same</li>
+                            <li class="fragment">Onboarding time for new developers</li>
                         </ul>
                         <aside class="notes">
                             Historical problems we want to solve, not related to the old way.
@@ -91,7 +109,7 @@
                     <ul>
                         <li>A development team not an individual</li>
                         <li>An efficient workflow</li>
-                        <li>Deliver amazing results each sprint</li>
+                        <li>Deliver amazing results and value each sprint</li>
                     </ul>
                     <aside class="notes">
                         Link last point to the old way gap - this is just the opposite to the problems
@@ -103,11 +121,29 @@
                         <h2>Where to start?</h2>
                     </section>
                     <section>
-                        <h2>Lay the foundations</h2>
+                        <h2>Sprint 0</h2>
                         <ul>
-                            <li class="fragment">Team structure</li>
-                            <li class="fragment">SASS / Compass</li>
-                            <li class="fragment">SMACSS / BEM</li>
+                            <li>Theme setup</li>
+                            <li>Drupal's CSS / markup</li>
+                            <li>CSS Methodology / Architecture</li>
+                            <li>Documentation</li>
+                            <li>Automation</li>
+                            <li>Assets</li>
+                            <li>Testing</li>
+                            <li>Definition of done</li>
+                            <li>Team structure</li>
+                        </ul>
+                        <aside class="notes">
+                            Explain the checklist.
+                            Explain the PM's role / awareness for devs.
+                            Clarify it's making decisions not always developing.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>CSS Foundations</h2>
+                        <ul>
+                            <li>SASS</li>
+                            <li>SMACSS / BEM</li>
                         </ul>
                         <aside class="notes">
                             Talk about responsibilities of the leaders.
@@ -117,15 +153,17 @@
                             SMACCS - this is the bit where we build something and
                             tell drupal about it.
                             Talk about pattern libraries / components.
+                            Talks about folder structure scaffold
                         </aside>
                     </section>
                     <section>
                         <h2>Coding standards</h2>
                         <p class="fragment">Drupal has CSS coding standards</p>
                         <p class="fragment">The rest of the web has coding standards</p>
+                        <p class="fragment">There are tools to help you enforce coding standards</p>
                         <aside class="notes">
                             Most people know the php coding standards
-                            Things like line length, spacing, nameing conventions.
+                            Things like line length, spacing, naming conventions.
                             It is there for consistency - most historical problems are there
                             due to inconsistency or bad css.
                             Learn from sass coding standards. Again, we are building
@@ -133,17 +171,34 @@
                             the other 98%
                         </aside>
                     </section>
+                    <section>
+                        <h2>Will my team mates understand this?</h2>
+                        <aside class="notes">
+                            Project readme is essential.
+                            All setup info, e.g bundler / npm need to be explicit.
+                            Don't assume everybody will know.
+                            Don't be afraid to point out the obvious. E.g. I can't
+                            remember how to compile less files?
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
                     <section>
                         <h2>Documenting CSS</h2>
+                        <img src="assets/documentation.png">
                         <aside class="notes">
                             PHP Tell the why, not what.
                             CSS Tell the what / when / how / why / where and why.
                             Story about generating html from css.
                         </aside>
                     </section>
+
+                    <section>
+                        <h2>SassDoc</h2>
+                    </section>
+
+                    <section data-background="assets/sassdocexample.mp4"></section>
 
                     <section>
                         <h2>Hologram syntax</h2>
@@ -166,8 +221,19 @@ I am a comment
                         </aside>
                     </section>
 
-                    <section data-background-video="assets/hologramexample.mov">
+                    <section data-background-video="assets/hologramexample.mp4">
                     </section>
+
+                    <section>
+                        <h2>PatternLab</h2>
+                        <aside class="notes">
+                            talk about how we've used it.
+                            plug github repo
+                            talk about how it might impact d8
+                        </aside>
+                    </section>
+
+                    <section data-background-video="assets/patternlab.mp4"></section>
 
                     <section>
                         <h2>Benefits</h2>
@@ -187,27 +253,65 @@ I am a comment
                     </section>
                 </section>
 
-                <section data-background="firebrick">
-                    <h2>Another Problem</h2>
-                    <blockquote class="fragment">"That hover colour isn't right"</blockquote>
-                    <blockquote class="fragment">"That slide transition is too slow"</blockquote>
-                    <aside class="notes">
-                        Build up the story with example of complex backend development.
-                    </aside>
+                <section>
+                    <section>
+                        <h2>Sprint 1 onwards...</h2>
+                        <aside class="notes">
+                            We can start themeing / building css without drupal markup
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>The non Drupal themer</h2>
-                    <ul>
-                        <li class="fragment">Just creating components isn't enough</li>
-                        <li class="fragment">Drupal theming is a bit too much</li>
-                    </ul>
-                    <aside class="notes">
-                        We don't live in an ideal world.
-                    </aside>
+                    <section>
+                        <h2>What we did wrong</h2>
+                        <h3>3 User stories</h3>
+                        <ul>
+                            <li>Theme: no dependency</li>
+                            <li>Functionality: no dependency</li>
+                            <li>Integrate: dependent on both</li>
+                        </ul>
+                        <aside class="notes">
+                            Talk about ticket structure / child tasks
+                            Give examples of different stages of the project
+                            (e.g kickoff through to ecommerce)
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>What we did right</h2>
+                        <h3>1 User story - up to 3 sub tasks</h3>
+                        <ul>
+                            <li>Theme</li>
+                            <li>Functionality</li>
+                            <li>Integrate</li>
+                        </ul>
+                        <aside class="notes">
+                            Talk about how PO can perceive this
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>The new way</h2>
+                        <img class="stretch" src="assets/new-way.svg" />
+                        <aside class="notes">
+                            The gap is smaller, it should never go over one sprint.
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Theme tickets</h2>
+                        <ul>
+                            <li>Look to the style guide for existing styles</li>
+                            <li>Estimate new components / prototype</li>
+                        </ul>
+                        <aside class="notes">
+                            Bring up previous story - this is agile, client might be happy
+                            to reuse than to create extra work.
+                            Talk about whose job it is to estimate components
+                        </aside>
+                    </section>
                     <section>
                         <h2>Prototyping inside Drupal</h2>
                         <ul>
@@ -228,9 +332,9 @@ I am a comment
                     <section>
                         <pre><code data-trim>
 /**
- * Implements hook_menu().
- */
-function sage_statics_menu() {
+* Implements hook_menu().
+*/
+  function sage_statics_menu() {
   $items = array();
   $items['statics/%'] = array(
     'page callback' => 'sage_statics_page',
@@ -245,58 +349,31 @@ function sage_statics_menu() {
                     <section>
                         <pre><code data-trim>
 /**
- * Page callback: Statics pages
- */
+* Page callback: Statics pages
+*/
 function sage_statics_page($page) {
   switch ($page) {
     case SageStatics::PAGE_BOOK_PRODUCT:
     return theme(SageStatics::THEME_BOOK_PRODUCT);
 
     // etc...
-  }
+    }
 }
                         </code></pre>
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>3 Ticket Approach</h2>
-                        <ul>
-                            <li>Theme: no dependency</li>
-                            <li>Develop: no dependency</li>
-                            <li>Integrate: dependent on both</li>
-                        </ul>
-                        <aside class="notes">
-                            Talk about ticket structure / child tasks
-                            Give examples of different stages of the project
-                            (e.g kickoff through to ecommerce)
-                        </aside>
-                    </section>
+                    <h2>Development tickets</h2>
+                    <p>(Mostly) Unchanged</p>
+                    <aside class="notes">
+                        Explain communication with themer, possibly picking
+                        out classes if it is simple enough.
+                        Make sure all data is available for the front end.
+                    </aside>
+                </section>
 
-                    <section>
-                        <h2>Theme tickets</h2>
-                        <ul>
-                            <li>Look to the style guide for existing styles</li>
-                            <li>Estimate new components / prototype</li>
-                        </ul>
-                        <aside class="notes">
-                            Bring up previous story - this is agile, client might be happy
-                            to reuse than to create extra work.
-                            Talk about whose job it is to estimate components
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Development tickets</h2>
-                        <p>(Mostly) Unchanged</p>
-                        <aside class="notes">
-                            Explain communication with themer, possibly picking
-                            out classes if it is simple enought.
-                            Make sure all data is available for the front end.
-                        </aside>
-                    </section>
-
+                <section>
                     <section>
                         <h2>Integration tickets</h2>
                         <ul>
@@ -307,13 +384,132 @@ function sage_statics_page($page) {
                             Typically just merging the markup from the statics into the actual theme.
                         </aside>
                     </section>
-
                     <section>
-                        <h2>The new way</h2>
-                        <img class="stretch" src="assets/new-way.svg" />
+                        <h2>Option 1: Fuglies</h2>
+                        <pre><code data-trim>
+.component,
+%component {
+  content: 'component';
+
+  &--variant {
+    content: 'variant';
+  }
+
+  &__element {
+    content: 'element';
+  }
+}
+
+// Fugly selectors.
+.my-fugly-selector {
+  @extend %component__element;
+}
+                        </code></pre>
+                        <p><a href="https://gist.github.com/JohnAlbin/b4329a2a4fb4a5caf1f2">Source: https://gist.github.com/JohnAlbin/b4329a2a4fb4a5caf1f2</a></p>
+                    </section>
+                    <section>
+                        <h2>Option 2: Preprocessing</h2>
+                    </section>
+                    <section>
+                        <h2>AbstractThemeProcessor</h2>
+
+                        <pre><code data-trim>
+abstract class AbstractThemeProcessor {
+  /**
+  * @var array
+  */
+  private $vars;
+  /**
+  * @param array $vars
+  */
+  private function __construct(&$vars) {
+    $this->vars = &$vars;
+    if ($this->isApplicable()) {
+      $this->execute();
+    }
+  }
+  /**
+  * @param array $vars
+  * @return static
+  */
+  public static function process(&$vars) {
+    return new static($vars);
+  }
+  /**
+  * @return mixed
+  */
+  abstract public function execute();
+  /**
+  * @return bool
+  */
+  abstract public function isApplicable();
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Article Processor</h2>
+                        <pre><code data-trim>
+class ArticleNodeProcessor extends AbstractNodeProcessor {
+  // Example variable.
+  const VAR_EXAMPLE = 'example';
+  const VAR_EXAMPLE_FROM_NODE = 'example_node';
+  /**
+  * {@inheritDoc}
+  */
+  public function isApplicable() {
+    return $this->isNodeType(ArticleController::getClassEntityBundle());
+  }
+  /**
+  * {@inheritDoc}
+  */
+  public function execute() {
+    $this->articleController = example_article_factory()->initWithEntity($this->getVar('node'));
+    $this->addExtraDisplayItems();
+  }
+  /**
+  * Add extra display items.
+  */
+  public function addExtraDisplayItems() {
+    $this->setVar(self::VAR_EXAMPLE, 'Variable value');
+    $this->setVar(self::VAR_EXAMPLE_FROM_NODE, $this->articleController->getExampleValue());
+  }
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code data-trim>
+/**
+* Implements template_preprocess_node().
+*/
+function example_preprocess_node(&$vars) {
+  ArticleNodeProcessor::process($vars);
+  ArticleNodeTeaserProcessor::process($vars);ß
+  BlogNodeProcessor::process($vars);
+  CarouselItemNodeProcessor::process($vars);
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Both?</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-background="firebrick">
+                        <h2>Another Problem</h2>
+                        <blockquote class="fragment">"That hover colour isn't right"</blockquote>
+                        <blockquote class="fragment">"That slide transition is too slow"</blockquote>
                         <aside class="notes">
-                            The gap is smaller, it should never go over one sprint.
+                            Build up the story with example of complex backend development.
                         </aside>
+                    </section>
+                    <section>
+                        <h2>Feedback loop</h2>
+                        <img src="assets/feedback-loop-1.svg">
+                    </section>
+                    <section>
+                        <h2>Early Feedback</h2>
+                        <img src="assets/feedback-loop-2.svg">
                     </section>
                 </section>
 
@@ -321,7 +517,6 @@ function sage_statics_page($page) {
                     <h2>@todo: TEST!</h2>
                     <aside>
                         Refactoring will happen often.
-                        Talk about component testing, whole site regression testing.
                     </aside>
                 </section>
 
